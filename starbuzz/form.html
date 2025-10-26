@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>The Starbuzz Bean Machine</title>
+    <link rel="stylesheet" href="styledform.css">
 </head>
 <body>
     <h1>The Starbuzz Bean Machine</h1>
     <h2>Fill out the form below and click "order now" to order</h2>
     <form action="http://starbuzzcoffee.com/processorder.php" method="POST">
+        <div class="tableRow">
 <p>
     Choose your beans:
+</p>
+<p>
     <select name="beans" id="">
         <option value="House Blend">House Blend</option>
         <option value="Shade Grown Bolivia Supremo">Shade Grown Bolivia Supremo</option>
@@ -17,38 +21,70 @@
         <option value="Kenya">Kenya</option>
     </select>
 </p>
+</div>
+
+<div class="tableRow">
 <p>
-    Type:<br>
+    Type:
+</p>
+<p>
     <input type="radio" name="beantype" id="" checked>Whole bean<br>
     <input type="radio" name="beantype" id="">Ground
 </p>
+</div>
+
+<div class="tableRow">
+<p>Number of bags:</p> 
+<p><input type="number" min="1" max="10" name="bags"></p>
+</div>
+
+<div class="tableRow">
+<p>Must arrive by date:</p>
+<p><input type="date" name="date"></p>
+</div>
+<div class="tableRow">
+<p>Extras:</p>
 <p>
-    Extras:<br>
    <input type="checkbox" name="extras[]" id="giftwrap">Gift wrap<br>
-   <input type="checkbox" name="extras[]" id="catalog" checked>Include catalog with order
+   <input type="checkbox" name="extras[]" id="catalog" checked>
+   Include catalog with order
 </p>
-<p>
-    Number of bags: <input type="number" min="1" max="10" name="bags">
-</p>
-<p>
-    Must arrive by date: <input type="date" name="date">
-</p>
-    <p>
-        Ship to:<br>
-        Name:<input type="text" name="name"><br>
-        Address:<input type="text" name="address"><br>
-        City:<input type="text" name="city"><br>
-        State:<input type="text" name="state"><br>
-        Zip:<input type="text" name="zip"><br>
-        Phone:<input type="tel" name="phone"><br>
-    </p>
-    <p>
-        Customer Comments:
-        <textarea name="comments"></textarea>
-    </p>
-        <p>
-            <input type="submit" value="Order Now">
-        </p>
+</div>
+<div class="tableRow">
+    <p class="heading">Ship to:</p>
+    <p></p>
+</div>
+<div class="tableRow">
+    <p>Name:</p>
+    <p><input type="text" name="name"></p>
+</div>
+<div class="tableRow">
+    <p>Address:</p>
+    <p><input type="text" name="address"></p>
+</div>
+<div class="tableRow">
+    <p>City:</p>
+    <p><input type="text" name="city"></p>
+</div>
+<div class="tableRow">
+    <p>State:</p>
+    <p><input type="text" name="state"></p>
+</div>
+<div class="tableRow">
+    <p>Zip:</p>
+    <p><input type="text" name="zip"></p>
+</div>
+<div class="tableRow">
+<p>Phone:</p>
+<p><input type="tel" name="phone"></p>
+</div>
+<div class="tableRow">
+    <p>Customer Comments:</p>
+    <p><textarea name="comments" rows="10" cols="48"></textarea></p>
+</div>
+<div class="tableRow"></div>
+    <p></p>
+    <p><input type="submit" value="Order Now"></p>
     </form>
 </body>
 </html>
